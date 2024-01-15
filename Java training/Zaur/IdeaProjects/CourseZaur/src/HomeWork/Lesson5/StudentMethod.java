@@ -19,17 +19,11 @@ public class StudentMethod {
 
 }
 class StudentTest{
-
-    static void sred(String s, double d1, double d2, double d3){ //Почему статик ОБЭМА без статик не работало
-        double sred = (d1 + d2 + d3)/3;
-        System.out.println("Средняя у " + s + " = " + sred);
+    double sredArif(StudentMethod s1){
+        double res = (s1.sredEco + s1.sredEng + s1.sredMath)/3;
+        System.out.println("Средняя оценка у " + s1.name + " равна " + res);
+        return res;
     }
-
-//    double sredArif(StudentMethod s1){
-//        double res = (s1.sredEco + s1.sredEng + s1.sredMath)/3;
-//        System.out.println("Средняя оценка у " + s1.name + " равна " + res);
-//        return res;
-//    }
 
     public static void main(String[] args) {
         StudentMethod st1 = new StudentMethod();
@@ -51,16 +45,15 @@ class StudentTest{
         st3.sredEco = 2.2;
         st3.sredEng = 1.9;
 
-//        System.out.println("Средняя у " + st1.name + " = " + ((st1.sredMath + st1.sredEco + st1.sredEng)/3));
-//        sred(st1.name, st1.sredMath, st1.sredEco, st1.sredEng);
+//Вызвали метод класса StudentMethod
+//        double d1 = st1.sredArif(st1);
+//        System.out.println(d1);
+//Вызвали метод у класса StudentTest (так вроде красивее и правильнее)
+//        StudentTest st = new StudentTest();
+//        double d2 = st.sredArif(st1);
+//        System.out.println(d2);
 
-//        StudentTest st = new StudentTest(); Это если бы создали метод внутри класса StudentTest
-//        double a = st.sredArif(st1);
-//        System.out.println(a);
 
-        //Если метод создан в классе StudentMethod но походу лучше так не делать тк через один обьекты мы вызываем другой
-        st1.sredArif(st3);
-        double a = st1.sredArif(st2);
-        System.out.println(a);
+
     }
 }
