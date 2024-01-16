@@ -18,5 +18,9 @@ public class EmployeeTestLesson7 {
 
         //2)Действия при условии что конструктор дефолтный ( дефолтный то виден ВНУТРИ ПАКЕТА ) будет так же как и с public
         /*все он НЕ Видит данный конструктор так же и с private*/
+        //но видит через методы тк они public
+        emp.EmployeeId();
+        emp.EmployeeSurname();
+        emp.EmployeeSalary();
     }
 }
