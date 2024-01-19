@@ -1,5 +1,6 @@
 package day4;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Task1 {
@@ -15,6 +16,9 @@ public class Task1 {
         for (int x: array){
             System.out.print(x+" ");
         }
+        System.out.println();
+        //выввести строковый массив можно и через метод .toString() класса Arrays пример ниже
+        System.out.println(Arrays.toString(array));
 
         //Общий цикл для всех задач
         int count = 0;
@@ -36,7 +40,7 @@ public class Task1 {
             }
             sum+=array[i];
         }
-        System.out.println();
+
         //а) Длина массива
         System.out.println("Длина массива " + array.length);
 

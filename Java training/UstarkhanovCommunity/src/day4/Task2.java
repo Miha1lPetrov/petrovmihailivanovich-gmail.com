@@ -42,8 +42,15 @@ public class Task2 {
                 count++;
                 count2+=x;
             }
-
         }
+        //Сделал интереснее через стринг , но можно было просто взять остаток от деления на 10
+        int counetr = 0;
+        for (int element : array){
+            if (element % 10 == 0){
+                counetr++;
+            }
+        }
+        System.out.println("элементы на ноль через остаток от деления: " + counetr);
         System.out.println("Элементов оканчивающихся на ноль: " + count);
         System.out.println("Сумма элементов заканчивающихся на ноль: " + count2);
 
