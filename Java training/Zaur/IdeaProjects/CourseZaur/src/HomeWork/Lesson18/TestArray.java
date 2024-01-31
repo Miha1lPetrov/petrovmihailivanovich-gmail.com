@@ -9,7 +9,7 @@ public class TestArray {
         while (true){
             boolean flag = false;
             for (int i = 0; i < array.length-1; i++) {
-                if (array[i] > array[i+1]){
+                if (array[i] >  array[i+1]){
                     int t = array[i];
                     array[i] = array[i+1];
                     array[i+1] = t;
@@ -17,9 +17,10 @@ public class TestArray {
                 }
             }
             if (flag == false){
-                return array;
+                break;
             }
         }
+        return array;
     }
 
     static void showArray(String array[][]){ //просто красивый вывод без метода deepToString
@@ -48,11 +49,11 @@ public class TestArray {
     public static void main(String[] args) {
         int [] array = {5, 10, -32, - 3, 102, 145, 123};
         TestArray.sorting(array);
-        //System.out.println(Arrays.toString(array));
+        System.out.println(Arrays.toString(array));
 
-        String [][] array1 = {{"Элемент00", "Элемент01"}, {"Элемент"}, {"Элемент02", "Элемент03", "Элемент04"}};
-        System.out.println(Arrays.deepToString(array1));
-        TestArray.showArray(array1);
+//        String [][] array1 = {{"Элемент00", "Элемент01"}, {"Элемент"}, {"Элемент02", "Элемент03", "Элемент04"}};
+//        System.out.println(Arrays.deepToString(array1));
+//        TestArray.showArray(array1);
     }
 
 }
