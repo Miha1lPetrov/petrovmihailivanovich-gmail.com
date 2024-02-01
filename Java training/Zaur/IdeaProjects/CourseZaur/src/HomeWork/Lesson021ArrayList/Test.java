@@ -29,7 +29,7 @@ public class Test {
 //        }
 //        return list;
 //    }
-    
+
     //Можно было сделать проще пример ниже
 
     public static ArrayList abc(String ... s){
